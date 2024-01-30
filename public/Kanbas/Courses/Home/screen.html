@@ -6,45 +6,58 @@
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <a href="../../../index.html">Back to directory</a>
     <h1>Kanbas</h1>
+    <div class="d-flex d-none d-md-block d-lg-none">
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#kanbasNav" aria-expanded="true" aria-controls="kanbasNav">
+                =
+            </button>
+        </p>
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#courseNav" aria-expanded="true" aria-controls="courseNav">
+                +
+            </button>
+        </p>
+    </div>
     <!-- Implement links to Kanbas and Course Navigation -->
     <div class="d-flex">
-      <div class="d-none d-md-block">
-        <ul class="wd-kanbas-navigation">
-            <li><a href="http://northeastern.edu">N</a></li>
-            <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-            <li>
-                <a href="/Kanbas/Dashboard/screen.html">
-                <i class="fa fa-tachometer"></i> Dashboard</a>
-            </li>
-            <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Courses</a> </li>
-            <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
+      <div class="collapse collapse-horizontal d-lg-block" id="kanbasNav">
+            <ul class="wd-kanbas-navigation">
+                <li><a href="http://northeastern.edu">N</a></li>
+                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+                <li>
+                    <a href="/Kanbas/Dashboard/screen.html">
+                    <i class="fa fa-tachometer"></i> Dashboard</a>
+                </li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Courses</a> </li>
+                <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
       </div>
-      <div class="d-none d-md-block">
-        <ul class="wd-navigation">
-            <li class="wd-active">
-              <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-            <li>
-              <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
-            </li>
-            <li><a href="http://piazza.com">Piazza</a></li>
-            <li><a href="#">Zoom</a></li>
-            <li>
-              <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-            </li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-        </ul>
+      <div class="collapse collapse-horizontal d-lg-block" id="courseNav">
+            <ul class="wd-navigation">
+                <li class="wd-active">
+                  <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                <li>
+                  <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
+                </li>
+                <li><a href="http://piazza.com">Piazza</a></li>
+                <li><a href="#">Zoom</a></li>
+                <li>
+                  <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                </li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+            </ul>
       </div>
       <div class="flex-fill">
         <ul class="list-group wd-modules">
