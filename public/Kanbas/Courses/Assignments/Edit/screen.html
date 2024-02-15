@@ -1,5 +1,11 @@
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="/Kanbas/styles.css" />
+        <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+        <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css" rel="stylesheet"/>
+      </head>
     <body>
         <a href="../../../../index.html">Back to directory</a>
         <h1>Kanbas</h1>
@@ -8,92 +14,49 @@
             <tbody>
                 <tr>
                     <td>
-                        <ul>
+                        <ul class="wd-kanbas-navigation">
+                            <li><a href="http://northeastern.edu">
+                              <img width="60px" src="https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png">
+                            </a></li>
                             <li>
-                                <a href="/Kanbas/Account/Profile/screen.html">Account</a>
-                            </li>
+                              <a href="/Kanbas/Account/Profile/screen.html">
+                              <i class="fa fa-circle-user"></i> Account</a></li>
                             <li>
-                                <a href="#">Dashboard</a>
+                                <a href="/Kanbas/Dashboard/screen.html">
+                                <i class="fa fa-tachometer"></i> Dashboard</a>
                             </li>
-                            <li>
-                                <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                            </li>
-                            <li>
-                                <a href="#">Calendar</a>
-                            </li>
-                            <li>
-                                <a href="#">Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#">History</a>
-                            </li>
-                            <li>
-                                <a href="#">Studio</a>
-                            </li>
-                            <li>
-                                <a href="#">Commons</a>
-                            </li>
-                            <li>
-                                <a href="#">Help</a>
-                            </li>
+                            <li class="wd-active">
+                              <a href="/Kanbas/Courses/Home/screen.html">
+                              <i class="fa fa-book"></i>Courses</a> </li>
+                            <li><a href="#">
+                              <i class="fa fa-calendar"></i> Calendar</a></li>
+                            <li><a href="#">
+                              <i class="fa fa-inbox"></i> Inbox</a></li>
+                            <li><a href="#">
+                              <i class="fa-regular fa-clock"></i> History</a></li>
+                            <li><a href="#">
+                              <i class="fa fa-display"></i> Studio</a></li>
+                            <li><a href="#">
+                              <i class="fa fa-right-from-bracket"></i> Commons</a></li>
+                            <li><a href="#">
+                              <i class="fa-regular fa-circle-question"></i> Help</a></li>
                         </ul>
                     </td>
                     <td>
-                        <ul>
+                        <ul class="wd-navigation">
                             <li>
-                                <a href="/Kanbas/Courses/Home/screen.html">Home</a>
-                            </li>
+                              <a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
                             <li>
-                                <a href="#">Modules</a>
+                              <a href="/Kanbas/Courses/Modules/screen.html">Modules</a>
                             </li>
-                            <li>
-                                <a href="#">Piazza</a>
+                            <li><a href="http://piazza.com">Piazza</a></li>
+                            <li><a href="#">Zoom</a></li>
+                            <li class="wd-active">
+                              <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
                             </li>
-                            <li>
-                                <a href="#">Zoom Meetings</a>
-                            </li>
-                            <li>
-                                <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-                            </li>
-                            <li>
-                                <a href="#">Quizzes</a>
-                            </li>
-                            <li>
-                                <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
-                            </li>
-                            <li>
-                                <a href="#">People</a>
-                            </li>
-                            <li>
-                                <a href="#">Panopto Video</a>
-                            </li>
-                            <li>
-                                <a href="#">Discussions</a>
-                            </li>
-                            <li>
-                                <a href="#">Announcements</a>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                            </li>
-                            <li>
-                                <a href="#">Files</a>
-                            </li>
-                            <li>
-                                <a href="#">Rubrics</a>
-                            </li>
-                            <li>
-                                <a href="#">Outcomes</a>
-                            </li>
-                            <li>
-                                <a href="#">Collaborations</a>
-                            </li>
-                            <li>
-                                <a href="#">Syllabus</a>
-                            </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
                         </ul>
                     </td>
                     <td>
@@ -105,7 +68,7 @@
                             <textarea>This is the assignment description</textarea> <br>
                         
                             <label for="points">Points</label> <br>
-                            <input id="points" value="100"> <br>
+                            <input id="points" type="number" value="100"> <br>
                         
                             <label for="assignment-group">Assignment Group</label> <br>
                             <select id="assignment-group">
