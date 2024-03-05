@@ -12,11 +12,11 @@ import ArrayStateVariable from "./ArrayStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
 import ReduxExamples from "./ReduxExamples";
 import TodoList from "./ReduxExamples/todos/TodoList";
-import { useSelector } from "react-redux";
-import { LabState } from "../store";
+// import { useSelector } from "react-redux";
+// import { LabState } from "../store";
 
 function Assignment4() {
-  const { todos } = useSelector((state: LabState) => state.todosReducer);
+  // const { todos } = useSelector((state: LabState) => state.todosReducer);
   function sayHello() {
     alert("Hello");
   }
@@ -36,13 +36,13 @@ function Assignment4() {
       <ParentStateComponent/>
       <ReduxExamples/>
       <TodoList/>
-      <ul className="list-group">
+      {/* <ul className="list-group">
         {todos.map((todo) => (
           <li className="list-group-item" key={todo.id}>
             {todo.title}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

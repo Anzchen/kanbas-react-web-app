@@ -13,6 +13,13 @@ function Assignment3() {
  return (
    <div>
      <h1>Assignment 3</h1>
+     <ul className="list-group">
+        {todos.map((todo) => (
+          <li className="list-group-item" key={todo.id}>
+            {todo.title}
+          </li>
+        ))}
+      </ul>
      <ConditionalOutput/>
      <Styles/>
      <Classes/>
@@ -24,14 +31,6 @@ function Assignment3() {
      </Highlight>
      <Add a={3} b={4} />
      <TodoList/>
-     <ul className="list-group">
-        {todos.map((todo) => (
-          <li className="list-group-item" key={todo.id}>
-            {todo.title}
-          </li>
-        ))}
-      </ul>
-
    </div>
  )
 }
