@@ -1,11 +1,3 @@
-.wd-modules,
-.wd-modules * {
-  border-radius: 0%;
-  border: none;
-  margin: 0px;
-  padding: 0px;
-}
-
 .wd-modules {
   margin: 5px;
 }
@@ -33,4 +25,21 @@
 
 .wd-modules > li {
   margin-bottom: 20px;
+}
+
+button, select {
+  background: rgb(245, 245, 245);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(199, 205, 209);
+  border-image: initial;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
