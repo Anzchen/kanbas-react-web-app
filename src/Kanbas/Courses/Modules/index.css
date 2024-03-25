@@ -1,0 +1,45 @@
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+button, select {
+  background: rgb(245, 245, 245);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(199, 205, 209);
+  border-image: initial;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
