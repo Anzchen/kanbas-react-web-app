@@ -8,19 +8,28 @@ import {
   setModule,
   setModules,
 } from "./reducer";
-import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 import { KanbasState } from "../../store";
 import { FaEllipsisV } from "react-icons/fa";
 function ModuleList() {
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
   const { courseId } = useParams();
   useEffect(() => {
-    findModulesForCourse(courseId)
+    client.findModulesForCourse(courseId)
       .then((modules) =>
         dispatch(setModules(modules))
     );
   }, [courseId]);
   const handleAddModule = () => {
-    createModule(courseId, module).then((module) => {
+    client.createModule(courseId, module).then((module) => {
       dispatch(addModule(module));
     });
   };
@@ -40,10 +49,11 @@ function ModuleList() {
         <button type="button"><FaEllipsisV className="ms-2" /></button>
       <ul className="list-group wd-modules">
         <li className="list-group-item">
-          <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+          <button
+            onClick={handleAddModule}>
             Add
           </button>
-          <button onClick={() => dispatch(updateModule(module))}>
+          <button onClick={handleUpdateModule}>
             Update
           </button>
           <input value={module.name}
@@ -61,9 +71,8 @@ function ModuleList() {
               onClick={() => dispatch(setModule(module))}>
               Edit
             </button>
-            <button
-              onClick={() => dispatch(deleteModule(module._id))}>
-              Delete
+            <button onClick={() => handleDeleteModule(module._id)} >
+              Delete 
             </button>
             <h3 className="modName">{module.name}</h3>
             <p className="modDesc">{module.description}</p>
